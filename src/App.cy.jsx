@@ -7,5 +7,9 @@ describe('<App />', () => {
     cy.mount(<App />)
 
     cy.get('button').should('contain', 'Spara namn');
+
+    cy.get('button').click();
+
+    cy.get('button').should('contain', 'Logga ut');
   })
 })
